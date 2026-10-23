@@ -6,6 +6,14 @@ A small browser PoC that compares a text packing-list PDF with delivery photos, 
 
 [Watch the short demo](walkthrough.mp4) · [Screenshots](docs/screenshots/) · [Actual test log](sample-data/test_log.md) · [Expected results](sample-data/expected_results.json) · [Actual JSON](sample-data/actual/) · [Scope](docs/SCOPE_AND_LIMITATIONS.md) · [Cost assumptions](docs/COST_ESTIMATE.md)
 
+## Demo video · 43.71 seconds
+
+The animated preview below shows the recorded workflow and all three real model results. Click it to open the full-quality MP4. The recording is silent and captioned; model waiting intervals are accelerated and disclosed.
+
+[![ParcelProof demo: PDF and photo inputs, issue findings, corrected delivery, and incorrect manifest](docs/demo-preview.gif)](walkthrough.mp4)
+
+**[Open the full demo video](walkthrough.mp4)** · **[Download MP4](https://github.com/YiTaChen/codebridge-delivery-poc/raw/refs/heads/main/walkthrough.mp4)**
+
 ## Run locally
 
 Requires Python 3.12 or 3.13, Node.js 22+, npm, and Google Chrome or another modern browser. For the default model route, install the [official Codex CLI](https://learn.chatgpt.com/docs/cli) and authenticate on your own computer:
