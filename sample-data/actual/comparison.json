@@ -1,0 +1,645 @@
+{
+  "checked_at_utc": "2026-10-23T22:15:56.284508+00:00",
+  "scope": "Three predeclared synthetic cases; no real-world accuracy claim and no new model calls.",
+  "passed": true,
+  "cases": [
+    {
+      "id": "issue_delivery",
+      "passed": true,
+      "checks_passed": 51,
+      "checks_total": 51,
+      "failures": [],
+      "checks": [
+        {
+          "check": "All and only expected PDF SKU rows are present without duplicates",
+          "passed": true
+        },
+        {
+          "check": "Returned numbered PDF lines match extraction of the original uploaded PDF",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: confirmed quantity equals 2",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: status is one of matched",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: confirmed count equals distinct marked exact-SKU evidence, not photo appearances",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: confirmed quantity equals 0",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: status is one of unverified, identity_mismatch",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: confirmed quantity equals 2",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: status is one of quantity_mismatch",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: confirmed count equals distinct marked exact-SKU evidence, not photo appearances",
+          "passed": true
+        },
+        {
+          "check": "No row reports confirmed_missing or any unsupported status",
+          "passed": true
+        },
+        {
+          "check": "Visible unexpected SKUs equal the predeclared extras",
+          "passed": true
+        },
+        {
+          "check": "Unexpected/uncertain object has a supported conservative status",
+          "passed": true
+        },
+        {
+          "check": "Unexpected/uncertain object cites an uploaded photo and descriptive region",
+          "passed": true
+        },
+        {
+          "check": "Unexpected/uncertain object has a supported conservative status",
+          "passed": true
+        },
+        {
+          "check": "Unexpected/uncertain object cites an uploaded photo and descriptive region",
+          "passed": true
+        },
+        {
+          "check": "Every visual observation references an uploaded photo",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-05: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-05: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-05: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-06: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-06: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-06: obscured SKU was not guessed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-06: remains explicitly unverified and uncounted",
+          "passed": true
+        },
+        {
+          "check": "Actual run has a positive measured processing duration",
+          "passed": true
+        },
+        {
+          "check": "Actual provider and model are disclosed",
+          "passed": true
+        },
+        {
+          "check": "Cost basis is disclosed and distinct from measured duration",
+          "passed": true
+        }
+      ],
+      "observed_rows": [
+        {
+          "sku": "TEA-101",
+          "expected_qty": 2,
+          "confirmed_qty": 2,
+          "status": "matched",
+          "source_line": 7
+        },
+        {
+          "sku": "TEA-102",
+          "expected_qty": 1,
+          "confirmed_qty": 0,
+          "status": "unverified",
+          "source_line": 8
+        },
+        {
+          "sku": "MUG-201",
+          "expected_qty": 1,
+          "confirmed_qty": 2,
+          "status": "quantity_mismatch",
+          "source_line": 9
+        }
+      ],
+      "elapsed_seconds": 19.881,
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "id": "corrected_delivery",
+      "passed": true,
+      "checks_passed": 41,
+      "checks_total": 41,
+      "failures": [],
+      "checks": [
+        {
+          "check": "All and only expected PDF SKU rows are present without duplicates",
+          "passed": true
+        },
+        {
+          "check": "Returned numbered PDF lines match extraction of the original uploaded PDF",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: confirmed quantity equals 2",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: status is one of matched",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: confirmed count equals distinct marked exact-SKU evidence, not photo appearances",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: confirmed quantity equals 1",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: status is one of matched",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: confirmed count equals distinct marked exact-SKU evidence, not photo appearances",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: confirmed quantity equals 1",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: status is one of matched",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "MUG-201: confirmed count equals distinct marked exact-SKU evidence, not photo appearances",
+          "passed": true
+        },
+        {
+          "check": "No row reports confirmed_missing or any unsupported status",
+          "passed": true
+        },
+        {
+          "check": "Visible unexpected SKUs equal the predeclared extras",
+          "passed": true
+        },
+        {
+          "check": "Every visual observation references an uploaded photo",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "Actual run has a positive measured processing duration",
+          "passed": true
+        },
+        {
+          "check": "Actual provider and model are disclosed",
+          "passed": true
+        },
+        {
+          "check": "Cost basis is disclosed and distinct from measured duration",
+          "passed": true
+        }
+      ],
+      "observed_rows": [
+        {
+          "sku": "TEA-101",
+          "expected_qty": 2,
+          "confirmed_qty": 2,
+          "status": "matched",
+          "source_line": 7
+        },
+        {
+          "sku": "TEA-102",
+          "expected_qty": 1,
+          "confirmed_qty": 1,
+          "status": "matched",
+          "source_line": 8
+        },
+        {
+          "sku": "MUG-201",
+          "expected_qty": 1,
+          "confirmed_qty": 1,
+          "status": "matched",
+          "source_line": 9
+        }
+      ],
+      "elapsed_seconds": 11.066,
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "id": "incorrect_manifest",
+      "passed": true,
+      "checks_passed": 42,
+      "checks_total": 42,
+      "failures": [],
+      "checks": [
+        {
+          "check": "All and only expected PDF SKU rows are present without duplicates",
+          "passed": true
+        },
+        {
+          "check": "Returned numbered PDF lines match extraction of the original uploaded PDF",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: confirmed quantity equals 2",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: status is one of quantity_mismatch",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "TEA-101: confirmed count equals distinct marked exact-SKU evidence, not photo appearances",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: confirmed quantity equals 1",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: status is one of matched",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "TEA-102: confirmed count equals distinct marked exact-SKU evidence, not photo appearances",
+          "passed": true
+        },
+        {
+          "check": "MUG-202: confirmed quantity equals 0",
+          "passed": true
+        },
+        {
+          "check": "MUG-202: status is one of unverified, identity_mismatch",
+          "passed": true
+        },
+        {
+          "check": "MUG-202: expected quantity and source line equal the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "MUG-202: product label equals the PDF oracle",
+          "passed": true
+        },
+        {
+          "check": "MUG-202: cited source line contains the literal SKU",
+          "passed": true
+        },
+        {
+          "check": "MUG-202: every evidence region references an uploaded photo and remains explicitly unverified",
+          "passed": true
+        },
+        {
+          "check": "No row reports confirmed_missing or any unsupported status",
+          "passed": true
+        },
+        {
+          "check": "Visible unexpected SKUs equal the predeclared extras",
+          "passed": true
+        },
+        {
+          "check": "Unexpected/uncertain object has a supported conservative status",
+          "passed": true
+        },
+        {
+          "check": "Unexpected/uncertain object cites an uploaded photo and descriptive region",
+          "passed": true
+        },
+        {
+          "check": "Every visual observation references an uploaded photo",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-01: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-02: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-03: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: object was observed",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: observed in the expected view(s), including repeated views",
+          "passed": true
+        },
+        {
+          "check": "ITEM-04: visible SKU equals synthetic ground truth",
+          "passed": true
+        },
+        {
+          "check": "Actual run has a positive measured processing duration",
+          "passed": true
+        },
+        {
+          "check": "Actual provider and model are disclosed",
+          "passed": true
+        },
+        {
+          "check": "Cost basis is disclosed and distinct from measured duration",
+          "passed": true
+        }
+      ],
+      "observed_rows": [
+        {
+          "sku": "TEA-101",
+          "expected_qty": 1,
+          "confirmed_qty": 2,
+          "status": "quantity_mismatch",
+          "source_line": 7
+        },
+        {
+          "sku": "TEA-102",
+          "expected_qty": 1,
+          "confirmed_qty": 1,
+          "status": "matched",
+          "source_line": 8
+        },
+        {
+          "sku": "MUG-202",
+          "expected_qty": 1,
+          "confirmed_qty": 0,
+          "status": "identity_mismatch",
+          "source_line": 9
+        }
+      ],
+      "elapsed_seconds": 10.845,
+      "model": "gpt-6.1-sol"
+    }
+  ]
+}

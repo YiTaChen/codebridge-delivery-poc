@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "recorded_before_live_model_run": true,
+  "purpose": "Predeclared expectations for the deliberately small synthetic test set. This file is never sent to the model and is not an application response.",
+  "provenance": {
+    "pdfs": "Generated with reportlab by scripts/generate_pdfs.py; both are valid one-page text PDFs. The incorrect manifest contains incorrect order facts, not corrupt PDF syntax.",
+    "images": "Four synthetic product photographs generated with the built-in ChatGPT ImageGen tool at the user's request. Exact generation prompts are preserved in image_prompts.json; the tool did not expose an underlying image-model version.",
+    "ground_truth_status": "Before the first live inference test, the parent agent visually inspected all four generated images and reconciled every intended ITEM marker, visible SKU, product label, object count, repeated-view identity, and obscured ITEM-06 against this baseline. No human inspection is claimed.",
+    "scope": "Controlled capture convention with stable ITEM markers. No real customer data and no real-world accuracy claim."
+  },
+  "packing_rows": {
+    "packing_list_correct.pdf": [
+      {
+        "source_line": 7,
+        "sku": "TEA-101",
+        "label": "Green Tea",
+        "expected_qty": 2
+      },
+      {
+        "source_line": 8,
+        "sku": "TEA-102",
+        "label": "Green Tea Decaf",
+        "expected_qty": 1
+      },
+      {
+        "source_line": 9,
+        "sku": "MUG-201",
+        "label": "Ceramic Mug",
+        "expected_qty": 1
+      }
+    ],
+    "packing_list_incorrect.pdf": [
+      {
+        "source_line": 7,
+        "sku": "TEA-101",
+        "label": "Green Tea",
+        "expected_qty": 1
+      },
+      {
+        "source_line": 8,
+        "sku": "TEA-102",
+        "label": "Green Tea Decaf",
+        "expected_qty": 1
+      },
+      {
+        "source_line": 9,
+        "sku": "MUG-202",
+        "label": "Travel Mug",
+        "expected_qty": 1
+      }
+    ]
+  },
+  "issue_delivery_objects": [
+    {
+      "object_id": "ITEM-01",
+      "sku": "TEA-101",
+      "photos": [
+        "photo_1",
+        "photo_2"
+      ]
+    },
+    {
+      "object_id": "ITEM-02",
+      "sku": "TEA-101",
+      "photos": [
+        "photo_1"
+      ]
+    },
+    {
+      "object_id": "ITEM-03",
+      "sku": "TEA-103",
+      "label": "Green Tea Jasmine",
+      "photos": [
+        "photo_1",
+        "photo_2"
+      ]
+    },
+    {
+      "object_id": "ITEM-04",
+      "sku": "MUG-201",
+      "photos": [
+        "photo_1",
+        "photo_2"
+      ]
+    },
+    {
+      "object_id": "ITEM-05",
+      "sku": "MUG-201",
+      "photos": [
+        "photo_1"
+      ]
+    },
+    {
+      "object_id": "ITEM-06",
+      "sku": null,
+      "photos": [
+        "photo_1",
+        "photo_3"
+      ],
+      "visibility": "SKU label obscured; identity cannot be inferred"
+    }
+  ],
+  "corrected_delivery_objects": [
+    {
+      "object_id": "ITEM-01",
+      "sku": "TEA-101"
+    },
+    {
+      "object_id": "ITEM-02",
+      "sku": "TEA-101"
+    },
+    {
+      "object_id": "ITEM-03",
+      "sku": "TEA-102"
+    },
+    {
+      "object_id": "ITEM-04",
+      "sku": "MUG-201"
+    }
+  ],
+  "cases": [
+    {
+      "id": "issue_delivery",
+      "pdf": "packing_list_correct.pdf",
+      "photos": [
+        "photo_1.png",
+        "photo_2.png",
+        "photo_3.png"
+      ],
+      "rows": [
+        {
+          "sku": "TEA-101",
+          "confirmed_qty": 2,
+          "acceptable_statuses": [
+            "matched"
+          ]
+        },
+        {
+          "sku": "TEA-102",
+          "confirmed_qty": 0,
+          "acceptable_statuses": [
+            "unverified",
+            "identity_mismatch"
+          ],
+          "reason": "Visible TEA-103 is a similar-name different SKU. An obscured ITEM-06 cannot confirm TEA-102 or its absence. If associated by the model, identity_mismatch describes visible SKU disagreement only."
+        },
+        {
+          "sku": "MUG-201",
+          "confirmed_qty": 2,
+          "acceptable_statuses": [
+            "quantity_mismatch"
+          ]
+        }
+      ],
+      "required_observations": [
+        "TEA-103 must not count as TEA-102",
+        "ITEM-01, ITEM-03 and ITEM-04 must not count twice across photos",
+        "ITEM-06 remains unverified"
+      ],
+      "extra_skus": [
+        "TEA-103"
+      ]
+    },
+    {
+      "id": "corrected_delivery",
+      "pdf": "packing_list_correct.pdf",
+      "photos": [
+        "corrected_delivery.png"
+      ],
+      "rows": [
+        {
+          "sku": "TEA-101",
+          "confirmed_qty": 2,
+          "acceptable_statuses": [
+            "matched"
+          ]
+        },
+        {
+          "sku": "TEA-102",
+          "confirmed_qty": 1,
+          "acceptable_statuses": [
+            "matched"
+          ]
+        },
+        {
+          "sku": "MUG-201",
+          "confirmed_qty": 1,
+          "acceptable_statuses": [
+            "matched"
+          ]
+        }
+      ],
+      "extra_skus": []
+    },
+    {
+      "id": "incorrect_manifest",
+      "pdf": "packing_list_incorrect.pdf",
+      "photos": [
+        "corrected_delivery.png"
+      ],
+      "rows": [
+        {
+          "sku": "TEA-101",
+          "confirmed_qty": 2,
+          "acceptable_statuses": [
+            "quantity_mismatch"
+          ]
+        },
+        {
+          "sku": "TEA-102",
+          "confirmed_qty": 1,
+          "acceptable_statuses": [
+            "matched"
+          ]
+        },
+        {
+          "sku": "MUG-202",
+          "confirmed_qty": 0,
+          "acceptable_statuses": [
+            "unverified",
+            "identity_mismatch"
+          ],
+          "reason": "Visible MUG-201 is not MUG-202. Wrong manifest cannot make a different SKU count as a match."
+        }
+      ],
+      "extra_skus": [
+        "MUG-201"
+      ]
+    }
+  ],
+  "invariants": [
+    "No confirmed_missing result may be inferred from absence in the photos.",
+    "Exact SKU identity takes precedence over similar product labels.",
+    "Each stable ITEM marker represents one physical unit across all submitted views.",
+    "Every confirmed count must have a valid photo reference and descriptive evidence.",
+    "All model-generated regions are approximate descriptions unless independently verified."
+  ]
+}

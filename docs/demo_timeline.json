@@ -1,0 +1,43 @@
+{
+  "waits": [
+    {
+      "start": 8.341000000000001,
+      "end": 27.358
+    },
+    {
+      "start": 40.771,
+      "end": 50.896
+    },
+    {
+      "start": 56.556,
+      "end": 66.459
+    }
+  ],
+  "runs": [
+    {
+      "id": "issue_delivery",
+      "recorded_at": "2026-10-23T22:14:01.935Z",
+      "http_status": 200,
+      "elapsed_seconds": 19.881,
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "id": "corrected_delivery",
+      "recorded_at": "2026-10-23T22:14:25.472Z",
+      "http_status": 200,
+      "elapsed_seconds": 11.066,
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "id": "incorrect_manifest",
+      "recorded_at": "2026-10-23T22:14:41.035Z",
+      "http_status": 200,
+      "elapsed_seconds": 10.845,
+      "model": "gpt-6.1-sol"
+    }
+  ],
+  "browser_errors": [],
+  "total_seconds": 72.133,
+  "edited_duration_seconds": 43.71,
+  "editing": "Only model waiting intervals accelerated to 3 seconds each; captions disclose acceleration. No results replaced. Silent captioned recording."
+}

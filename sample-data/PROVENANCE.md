@@ -1,0 +1,12 @@
+# Synthetic fixture provenance
+
+These fixtures are deliberately small synthetic test inputs, prepared at the user's request. They contain no real order, customer, or photographed physical stock. They demonstrate an application workflow; they do not establish real-world accuracy.
+
+- `packing_list_correct.pdf`: generated with ReportLab. Three expected SKU rows, four units total. This manifest matches `corrected_delivery.png`.
+- `packing_list_incorrect.pdf`: generated with ReportLab. It deliberately requests only one TEA-101 and requests MUG-202 rather than MUG-201. It is a structurally valid one-page text PDF, suitable for testing incorrect manifest contents.
+- `photo_1.png` through `photo_3.png` and `corrected_delivery.png`: created using the built-in ChatGPT ImageGen tool, with stable ITEM markers for controlled cross-photo deduplication. The tool did not expose an underlying image-model version. Exact generation prompts are preserved in `image_prompts.json`. Before the first live inference test, the parent agent visually inspected all four generated images and confirmed their intended object counts, ITEM markers, visible SKUs and labels, repeated-view identities, and the fully obscured SKU/name on ITEM-06. This is agent inspection; no human inspection is claimed.
+- `expected_results.json`: expectations recorded before the live inference tests. It is an evaluation artifact and is never used by the application to select or generate answers. The planned image composition was reconciled against all four actual generated assets by agent visual inspection before the first live test; the baseline values did not require correction.
+
+The PDFs were rendered to PNG and visually inspected for layout, and their one-page text was extracted to check SKU rows and quantities. Nonempty extracted text lines 7, 8 and 9 contain the SKU rows in each PDF; the parent agent also confirmed these source-line references using the backend PDF extractor. The source generator is `scripts/generate_pdfs.py`; run it with Python and `reportlab` installed to recreate the PDF pair. PDF byte-for-byte identity is not promised because document metadata includes generation details.
+
+The expected comparison accepts either `unverified` or `identity_mismatch` for a requested SKU with a visibly similar but different SKU, depending on whether the model supplies a valid row association. Both outcomes must preserve the same safety invariant: the wrong SKU is not counted as the requested SKU, and unseen stock is never declared certainly missing.

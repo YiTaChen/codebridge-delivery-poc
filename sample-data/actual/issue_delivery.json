@@ -1,0 +1,333 @@
+{
+  "rows": [
+    {
+      "row_id": "PL-01",
+      "source_line": 7,
+      "sku": "TEA-101",
+      "label": "Green Tea",
+      "expected_qty": 2,
+      "confirmed_qty": 2,
+      "status": "matched",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Top left box.",
+          "region_verified": false,
+          "object_id": "ITEM-01",
+          "sku_read": "TEA-101",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        },
+        {
+          "photo_id": "photo_2",
+          "region_description": "Left box.",
+          "region_verified": false,
+          "object_id": "ITEM-01",
+          "sku_read": "TEA-101",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        },
+        {
+          "photo_id": "photo_1",
+          "region_description": "Top middle box.",
+          "region_verified": false,
+          "object_id": "ITEM-02",
+          "sku_read": "TEA-101",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        }
+      ],
+      "reason": "2 distinct marked units have the exact SKU. Repeated markers across photos count once."
+    },
+    {
+      "row_id": "PL-02",
+      "source_line": 8,
+      "sku": "TEA-102",
+      "label": "Green Tea Decaf",
+      "expected_qty": 1,
+      "confirmed_qty": 0,
+      "status": "unverified",
+      "evidence": [],
+      "reason": "Only 0 of 1 requested units can be verified. Obscured labels, uncertain identity, or items outside the photos do not prove missing delivery."
+    },
+    {
+      "row_id": "PL-03",
+      "source_line": 9,
+      "sku": "MUG-201",
+      "label": "Ceramic Mug",
+      "expected_qty": 1,
+      "confirmed_qty": 2,
+      "status": "quantity_mismatch",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Bottom left box.",
+          "region_verified": false,
+          "object_id": "ITEM-04",
+          "sku_read": "MUG-201",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        },
+        {
+          "photo_id": "photo_2",
+          "region_description": "Right box.",
+          "region_verified": false,
+          "object_id": "ITEM-04",
+          "sku_read": "MUG-201",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        },
+        {
+          "photo_id": "photo_1",
+          "region_description": "Bottom middle box.",
+          "region_verified": false,
+          "object_id": "ITEM-05",
+          "sku_read": "MUG-201",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        }
+      ],
+      "reason": "2 distinct marked units have the exact SKU; the PDF expects 1."
+    }
+  ],
+  "observations": [
+    {
+      "object_id": "ITEM-01",
+      "sku_read": "TEA-101",
+      "label_read": "Green Tea",
+      "photo_id": "photo_1",
+      "region_description": "Top left box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-01"
+    },
+    {
+      "object_id": "ITEM-02",
+      "sku_read": "TEA-101",
+      "label_read": "Green Tea",
+      "photo_id": "photo_1",
+      "region_description": "Top middle box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-01"
+    },
+    {
+      "object_id": "ITEM-03",
+      "sku_read": "TEA-103",
+      "label_read": "Green Tea Jasmine",
+      "photo_id": "photo_1",
+      "region_description": "Top right box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible. The visible SKU has no exact packing-list match; the similar tea labels do not establish a unique association.",
+      "related_row_id": null
+    },
+    {
+      "object_id": "ITEM-04",
+      "sku_read": "MUG-201",
+      "label_read": "Ceramic Mug",
+      "photo_id": "photo_1",
+      "region_description": "Bottom left box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-03"
+    },
+    {
+      "object_id": "ITEM-05",
+      "sku_read": "MUG-201",
+      "label_read": "Ceramic Mug",
+      "photo_id": "photo_1",
+      "region_description": "Bottom middle box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-03"
+    },
+    {
+      "object_id": "ITEM-06",
+      "sku_read": null,
+      "label_read": null,
+      "photo_id": "photo_1",
+      "region_description": "Bottom right box with gray tape across the lower label.",
+      "visibility": "obscured",
+      "confidence_note": "ITEM-06 is legible; gray tape hides the SKU and product label.",
+      "related_row_id": null
+    },
+    {
+      "object_id": "ITEM-01",
+      "sku_read": "TEA-101",
+      "label_read": "Green Tea",
+      "photo_id": "photo_2",
+      "region_description": "Left box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-01"
+    },
+    {
+      "object_id": "ITEM-03",
+      "sku_read": "TEA-103",
+      "label_read": "Green Tea Jasmine",
+      "photo_id": "photo_2",
+      "region_description": "Middle box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible. The visible SKU has no exact packing-list match; the similar tea labels do not establish a unique association.",
+      "related_row_id": null
+    },
+    {
+      "object_id": "ITEM-04",
+      "sku_read": "MUG-201",
+      "label_read": "Ceramic Mug",
+      "photo_id": "photo_2",
+      "region_description": "Right box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-03"
+    },
+    {
+      "object_id": "ITEM-06",
+      "sku_read": null,
+      "label_read": null,
+      "photo_id": "photo_3",
+      "region_description": "Single central box with gray tape below the ITEM marker.",
+      "visibility": "obscured",
+      "confidence_note": "ITEM-06 is fully legible; opaque gray tape covers the SKU and product label area.",
+      "related_row_id": null
+    }
+  ],
+  "extra_items": [
+    {
+      "object_id": "ITEM-03",
+      "sku_read": "TEA-103",
+      "label_read": "Green Tea Jasmine",
+      "status": "quantity_mismatch",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Top right box.",
+          "region_verified": false,
+          "object_id": "ITEM-03",
+          "sku_read": "TEA-103",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible. The visible SKU has no exact packing-list match; the similar tea labels do not establish a unique association."
+        },
+        {
+          "photo_id": "photo_2",
+          "region_description": "Middle box.",
+          "region_verified": false,
+          "object_id": "ITEM-03",
+          "sku_read": "TEA-103",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible. The visible SKU has no exact packing-list match; the similar tea labels do not establish a unique association."
+        }
+      ],
+      "reason": "A distinct object with this visible SKU is not on the packing list."
+    },
+    {
+      "object_id": "ITEM-06",
+      "sku_read": null,
+      "label_read": null,
+      "status": "unverified",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Bottom right box with gray tape across the lower label.",
+          "region_verified": false,
+          "object_id": "ITEM-06",
+          "sku_read": null,
+          "visibility": "obscured",
+          "confidence_note": "ITEM-06 is legible; gray tape hides the SKU and product label."
+        },
+        {
+          "photo_id": "photo_3",
+          "region_description": "Single central box with gray tape below the ITEM marker.",
+          "region_verified": false,
+          "object_id": "ITEM-06",
+          "sku_read": null,
+          "visibility": "obscured",
+          "confidence_note": "ITEM-06 is fully legible; opaque gray tape covers the SKU and product label area."
+        }
+      ],
+      "reason": "Identity or stable marker cannot be confirmed; excluded from exact counts."
+    }
+  ],
+  "warnings": [
+    "Evidence regions are model descriptions, not independently verified bounding boxes. Synthetic samples are not real-world accuracy validation."
+  ],
+  "pdf_lines": [
+    {
+      "line": 1,
+      "text": "PARCELPROOF / SYNTHETIC TEST DATA"
+    },
+    {
+      "line": 2,
+      "text": "Packing list"
+    },
+    {
+      "line": 3,
+      "text": "Test order: SYNTH-001 / fixture A"
+    },
+    {
+      "line": 4,
+      "text": "Correct manifest"
+    },
+    {
+      "line": 5,
+      "text": "One page / text PDF / 3 line items"
+    },
+    {
+      "line": 6,
+      "text": "SKU | Product label | Quantity"
+    },
+    {
+      "line": 7,
+      "text": "TEA-101 | Green Tea | 2"
+    },
+    {
+      "line": 8,
+      "text": "TEA-102 | Green Tea Decaf | 1"
+    },
+    {
+      "line": 9,
+      "text": "MUG-201 | Ceramic Mug | 1"
+    },
+    {
+      "line": 10,
+      "text": "Fixture purpose"
+    },
+    {
+      "line": 11,
+      "text": "Expected contents of the corrected delivery image."
+    },
+    {
+      "line": 12,
+      "text": "Also compare against the issue-delivery photos to reveal discrepancies."
+    },
+    {
+      "line": 13,
+      "text": "Generated for a small controlled PoC. No real order or customer information."
+    },
+    {
+      "line": 14,
+      "text": "Use stable ITEM markers in photos; an invisible label is not proof of missing stock."
+    },
+    {
+      "line": 15,
+      "text": "1 / 1"
+    }
+  ],
+  "metrics": {
+    "elapsed_seconds": 19.881,
+    "elapsed_measured": true,
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "usage": {
+      "input_tokens": 18069,
+      "output_tokens": 790,
+      "cached_input_tokens": 0
+    },
+    "cost": {
+      "estimated_usd": null,
+      "basis": "ChatGPT subscription usage; no per-run billed amount is available.",
+      "assumptions": "CLI token usage, when returned, is measured. Subscription limits and plan fees are separate from API pricing.",
+      "pricing_url": "https://learn.chatgpt.com/docs/pricing"
+    }
+  }
+}

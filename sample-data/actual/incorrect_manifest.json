@@ -1,0 +1,220 @@
+{
+  "rows": [
+    {
+      "row_id": "PL-01",
+      "source_line": 7,
+      "sku": "TEA-101",
+      "label": "Green Tea",
+      "expected_qty": 1,
+      "confirmed_qty": 2,
+      "status": "quantity_mismatch",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Leftmost box.",
+          "region_verified": false,
+          "object_id": "ITEM-01",
+          "sku_read": "TEA-101",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        },
+        {
+          "photo_id": "photo_1",
+          "region_description": "Second box from the left.",
+          "region_verified": false,
+          "object_id": "ITEM-02",
+          "sku_read": "TEA-101",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        }
+      ],
+      "reason": "2 distinct marked units have the exact SKU; the PDF expects 1."
+    },
+    {
+      "row_id": "PL-02",
+      "source_line": 8,
+      "sku": "TEA-102",
+      "label": "Green Tea Decaf",
+      "expected_qty": 1,
+      "confirmed_qty": 1,
+      "status": "matched",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Third box from the left.",
+          "region_verified": false,
+          "object_id": "ITEM-03",
+          "sku_read": "TEA-102",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and product label are fully legible."
+        }
+      ],
+      "reason": "1 distinct marked units have the exact SKU. Repeated markers across photos count once."
+    },
+    {
+      "row_id": "PL-03",
+      "source_line": 9,
+      "sku": "MUG-202",
+      "label": "Travel Mug",
+      "expected_qty": 1,
+      "confirmed_qty": 0,
+      "status": "identity_mismatch",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Rightmost box.",
+          "region_verified": false,
+          "object_id": "ITEM-04",
+          "sku_read": "MUG-201",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and label are fully legible. Mug label is similar to the packing-list mug product, but the visible SKU differs."
+        }
+      ],
+      "reason": "A related/similar label has a different visible SKU and is not counted as the requested item. Expected units remain unverified; this does not prove substitution or absence."
+    }
+  ],
+  "observations": [
+    {
+      "object_id": "ITEM-01",
+      "sku_read": "TEA-101",
+      "label_read": "Green Tea",
+      "photo_id": "photo_1",
+      "region_description": "Leftmost box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-01"
+    },
+    {
+      "object_id": "ITEM-02",
+      "sku_read": "TEA-101",
+      "label_read": "Green Tea",
+      "photo_id": "photo_1",
+      "region_description": "Second box from the left.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-01"
+    },
+    {
+      "object_id": "ITEM-03",
+      "sku_read": "TEA-102",
+      "label_read": "Green Tea Decaf",
+      "photo_id": "photo_1",
+      "region_description": "Third box from the left.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and product label are fully legible.",
+      "related_row_id": "PL-02"
+    },
+    {
+      "object_id": "ITEM-04",
+      "sku_read": "MUG-201",
+      "label_read": "Ceramic Mug",
+      "photo_id": "photo_1",
+      "region_description": "Rightmost box.",
+      "visibility": "clear",
+      "confidence_note": "Marker, SKU, and label are fully legible. Mug label is similar to the packing-list mug product, but the visible SKU differs.",
+      "related_row_id": "PL-03"
+    }
+  ],
+  "extra_items": [
+    {
+      "object_id": "ITEM-04",
+      "sku_read": "MUG-201",
+      "label_read": "Ceramic Mug",
+      "status": "quantity_mismatch",
+      "evidence": [
+        {
+          "photo_id": "photo_1",
+          "region_description": "Rightmost box.",
+          "region_verified": false,
+          "object_id": "ITEM-04",
+          "sku_read": "MUG-201",
+          "visibility": "clear",
+          "confidence_note": "Marker, SKU, and label are fully legible. Mug label is similar to the packing-list mug product, but the visible SKU differs."
+        }
+      ],
+      "reason": "A distinct object with this visible SKU is not on the packing list."
+    }
+  ],
+  "warnings": [
+    "Evidence regions are model descriptions, not independently verified bounding boxes. Synthetic samples are not real-world accuracy validation."
+  ],
+  "pdf_lines": [
+    {
+      "line": 1,
+      "text": "PARCELPROOF / SYNTHETIC TEST DATA"
+    },
+    {
+      "line": 2,
+      "text": "Packing list"
+    },
+    {
+      "line": 3,
+      "text": "Test order: SYNTH-001 / fixture B"
+    },
+    {
+      "line": 4,
+      "text": "Intentionally incorrect manifest"
+    },
+    {
+      "line": 5,
+      "text": "One page / text PDF / 3 line items"
+    },
+    {
+      "line": 6,
+      "text": "SKU | Product label | Quantity"
+    },
+    {
+      "line": 7,
+      "text": "TEA-101 | Green Tea | 1"
+    },
+    {
+      "line": 8,
+      "text": "TEA-102 | Green Tea Decaf | 1"
+    },
+    {
+      "line": 9,
+      "text": "MUG-202 | Travel Mug | 1"
+    },
+    {
+      "line": 10,
+      "text": "Fixture purpose"
+    },
+    {
+      "line": 11,
+      "text": "This is a valid PDF with deliberately wrong order contents."
+    },
+    {
+      "line": 12,
+      "text": "It understates Green Tea quantity and requests the wrong mug SKU."
+    },
+    {
+      "line": 13,
+      "text": "Generated for a small controlled PoC. No real order or customer information."
+    },
+    {
+      "line": 14,
+      "text": "Use stable ITEM markers in photos; an invisible label is not proof of missing stock."
+    },
+    {
+      "line": 15,
+      "text": "1 / 1"
+    }
+  ],
+  "metrics": {
+    "elapsed_seconds": 10.845,
+    "elapsed_measured": true,
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "usage": {
+      "input_tokens": 14274,
+      "output_tokens": 383,
+      "cached_input_tokens": 0
+    },
+    "cost": {
+      "estimated_usd": null,
+      "basis": "ChatGPT subscription usage; no per-run billed amount is available.",
+      "assumptions": "CLI token usage, when returned, is measured. Subscription limits and plan fees are separate from API pricing.",
+      "pricing_url": "https://learn.chatgpt.com/docs/pricing"
+    }
+  }
+}

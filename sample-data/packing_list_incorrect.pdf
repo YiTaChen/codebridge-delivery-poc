@@ -1,0 +1,124 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
+endobj
+6 0 obj
+<<
+/Author (ParcelProof synthetic fixture generator) /CreationDate (D:20261023151023-07'00') /Creator (anonymous) /Keywords () /ModDate (D:20261023151023-07'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (Intentionally incorrect manifest) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Length 1979
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+.090196 .192157 .211765 rg
+n 0 711.8898 595.2756 130 re f*
+1 1 1 rg
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 44 798.8898 Tm (PARCELPROOF / SYNTHETIC TEST DATA) Tj T* ET
+BT /F2 25 Tf 30 TL ET
+BT 1 0 0 1 44 759.8898 Tm (Packing list) Tj T* ET
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 44 737.8898 Tm (Test order: SYNTH-001 / fixture B) Tj T* ET
+.090196 .192157 .211765 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 44 670.8898 Tm (Intentionally incorrect manifest) Tj T* ET
+.321569 .403922 .403922 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 44 648.8898 Tm (One page / text PDF / 3 line items) Tj T* ET
+.094118 .47451 .427451 rg
+n 44 593.8898 507.2756 30 re f*
+1 1 1 rg
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 57 603.8898 Tm (SKU | Product label | Quantity) Tj T* ET
+.941176 .960784 .94902 rg
+n 44 540.8898 507.2756 44 re f*
+.090196 .192157 .211765 rg
+BT /F1 12 Tf 14.4 TL ET
+BT 1 0 0 1 57 556.8898 Tm (TEA-101 | Green Tea | 1) Tj T* ET
+1 1 1 rg
+n 44 496.8898 507.2756 44 re f*
+.090196 .192157 .211765 rg
+BT /F1 12 Tf 14.4 TL ET
+BT 1 0 0 1 57 512.8898 Tm (TEA-102 | Green Tea Decaf | 1) Tj T* ET
+.941176 .960784 .94902 rg
+n 44 452.8898 507.2756 44 re f*
+.090196 .192157 .211765 rg
+BT /F1 12 Tf 14.4 TL ET
+BT 1 0 0 1 57 468.8898 Tm (MUG-202 | Travel Mug | 1) Tj T* ET
+.847059 .886275 .866667 RG
+n 44 442.8898 m 551.2756 442.8898 l S
+.090196 .192157 .211765 rg
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 44 400.8898 Tm (Fixture purpose) Tj T* ET
+.321569 .403922 .403922 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 44 377.8898 Tm (This is a valid PDF with deliberately wrong order contents.) Tj T* ET
+BT 1 0 0 1 44 361.8898 Tm (It understates Green Tea quantity and requests the wrong mug SKU.) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 44 72 Tm (Generated for a small controlled PoC. No real order or customer information.) Tj T* ET
+BT 1 0 0 1 44 56 Tm (Use stable ITEM markers in photos; an invisible label is not proof of missing stock.) Tj T* ET
+BT 1 0 0 1 533.7616 33 Tm (1 / 1) Tj T* ET
+ 
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000907 00000 n 
+0000000966 00000 n 
+trailer
+<<
+/ID 
+[<280ee35e8b0eef5f2841a4165b6a8a44><280ee35e8b0eef5f2841a4165b6a8a44>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
+startxref
+2996
+%%EOF
