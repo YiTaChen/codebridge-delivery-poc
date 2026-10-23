@@ -25,6 +25,21 @@ For BYOK, choose **OpenAI API · your key** and enter your own API key in the ma
 
 For frontend development, run the backend with `.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000`, then run `npm run dev` inside `frontend/` and open http://127.0.0.1:5173.
 
+## Your account, credentials, and usage
+
+**Everyone who clones this repository must use their own ChatGPT sign-in or provide their own OpenAI API key. Usage belongs to that evaluator's account, not the repository author's account.**
+
+| Selected connection | What the evaluator supplies | Whose usage or billing applies |
+|---|---|---|
+| ChatGPT · local Codex | Their own ChatGPT sign-in through `codex login` on the computer running the backend | That signed-in account's available Codex/ChatGPT plan usage |
+| OpenAI API · your key | Their own API key entered in the app's masked field | The OpenAI API project/account associated with that key; API billing is separate from ChatGPT plan usage |
+
+Cloning the repo does not copy the author's login session, API key, or credits. There is no shared author-funded inference service or bundled credential. The public repository and its Git history were checked on 2026-10-23: no API keys, authentication tokens, or login-cache files were found, and no GitHub repository Secrets were configured. CI runs offline checks without inference calls.
+
+The backend uses credentials available on **the machine running it**. Before testing, run `codex login status` and confirm it uses your intended ChatGPT account. On a shared computer, an existing CLI login or locally configured credential may belong to someone else; cloning alone does not switch accounts. BYOK requests use only the key entered for that request. Keep this app local rather than exposing an authenticated backend to other people.
+
+For transparency, the three recorded demo analyses used the author's then-current ChatGPT sign-in and consumed that account's plan usage. No author API key was used for those tests. Published results contain observations, timings, and usage counts, not reusable login credentials. Subsequent evaluators supply and consume their own account usage.
+
 ## Try it
 
 1. Load **Issue delivery**, or upload your own one-page text PDF and one to three photos.
