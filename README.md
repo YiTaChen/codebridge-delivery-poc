@@ -76,7 +76,9 @@ The three live runs consumed the logged-in evaluator's ChatGPT/Codex plan usage.
 
 For BYOK planning only, public GPT-4.1 Mini rates checked on 2026-10-23 are $0.40/M input, $0.10/M cached input, and $1.60/M output. An explicit assumption of 6,000 total input tokens including images + 2,000 output tokens gives **$0.0056/order estimated**, with no cache discount. This is not a measured charge or the cost of the Codex runs. [Pricing, formulas, and source links](docs/COST_ESTIMATE.md).
 
-Development wall time and the exact recording duration are recorded below after final verification. This is a basic PoC, with no warehouse integration, accounts/billing, model benchmark, or production deployment. Scope was kept deliberately small.
+**Measured task wall time: 8 minutes 43 seconds (about 9 minutes)** from first document review at **2026-10-23 15:09:19 America/Vancouver (22:09:19 UTC)** through verified public publication and successful GitHub Actions at **15:18:02 (22:18:02 UTC)**. This includes implementation, parallel agent review, image/PDF creation, tests, recording/editing, documentation, and initial publication/CI; the final bookkeeping commit is outside that timing checkpoint. This is elapsed wall time, not summed parallel-agent labor or a claim of eight hours' work.
+
+The initial published code passed [GitHub Actions](https://github.com/YiTaChen/codebridge-delivery-poc/actions/runs/40032647036) on a fresh Linux runner: 33 backend tests, frontend install/build, and saved-result comparison. The video is **43.71 seconds**, from 72.133 seconds of source recording. This is a basic PoC, with no warehouse integration, accounts/billing, model benchmark, or production deployment.
 
 ## Demo and reproduction
 
